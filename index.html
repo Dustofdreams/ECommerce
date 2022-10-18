@@ -8,6 +8,7 @@
     <title>Library</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -21,13 +22,30 @@
                     <li><a href="" class="nav__link nav__link--primary">Books</a></li>
                 </ul>
             </div>
+            <button class="btn__menu" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="menu__backdrop">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>per
+                <ul class="menu__links">
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()"">Home</a></li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closeMenu()"">Books</a></li>
+                    <li class="menu__list">
+                        <a href="#" class="menu__link no-cursor" onclick="closeMenu()"">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
         </nav>
         <header>
             <div class="header__container">
                 <div class="header__descritption">
                     <h1>Bulgaria's most awarded online library platform</h1>
                     <h2>Find your dream book with <span class="purple">Library</span></h2>
-                    <button class="btn">Browse books</button>
+                    <a href="#featured"><button class="btn">Browse books</button></a>
                 </div>
                 <figure><img src="./assets/Undraw_Books.svg" alt="" class="header__img--wrapper"></figure>
             </div>
@@ -66,15 +84,16 @@
                 </div>
             </div>
         </section>
-        <section id="features">
+        <section id="featured">
             <div class="container">
                 <div class="row">
                     <h2 class="section__title"> Featured <span class="purple">Books</span></h2>
                     <div class="books">
                         <div class="book">
-                            <figure class="book__img--wrapper"><img src="./assets/crack the coding interview.png" alt="" class="book__img"></figure>
+                            <figure class="book__img--wrapper"><img src="./assets/gardens_of_the_moon_limited_cover.jpg"
+                                    alt="" class="book__img"></figure>
                             <div class="book__title">
-                                Book Title
+                                Gardens Of The Moon
                             </div>
                             <div class="book__ratings">
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
@@ -83,14 +102,16 @@
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
                                 <div class="book__ratings"><i class="fa fa-star-half"></i></div>
                             </div>
-                            <div class="boo__price">
-                                <span class="book__price--normal">40lv. </span> 14.99lv.
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">14.99lv.</span>
                             </div>
                         </div>
                         <div class="book">
-                            <figure class="book__img--wrapper"><img src="./assets/crack the coding interview.png" alt="" class="book__img"></figure>
+                            <figure class="book__img--wrapper"><img src="./assets/513uzQH5TCL.jpg" alt=""
+                                    class="book__img"></figure>
                             <div class="book__title">
-                                Book Title
+                                Learning Web Design
                             </div>
                             <div class="book__ratings">
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
@@ -99,14 +120,16 @@
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
                                 <div class="book__ratings"><i class="fa fa-star-half"></i></div>
                             </div>
-                            <div class="boo__price">
-                                <span class="book__price--normal">40lv. </span> 14.99lv.
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">14.99lv.</span>
                             </div>
                         </div>
                         <div class="book">
-                            <figure class="book__img--wrapper"><img src="./assets/crack the coding interview.png" alt="" class="book__img"></figure>
+                            <figure class="book__img--wrapper"><img src="./assets/product_13641.jpg" alt=""
+                                    class="book__img"></figure>
                             <div class="book__title">
-                                Book Title
+                                Fallen God
                             </div>
                             <div class="book__ratings">
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
@@ -115,14 +138,17 @@
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
                                 <div class="book__ratings"><i class="fa fa-star-half"></i></div>
                             </div>
-                            <div class="boo__price">
-                                <span class="book__price--normal">40lv. </span> 14.99lv.
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">14.99lv.</span>
                             </div>
                         </div>
                         <div class="book">
-                            <figure class="book__img--wrapper"><img src="./assets/crack the coding interview.png" alt="" class="book__img"></figure>
+                            <figure class="book__img--wrapper"><img
+                                    src="./assets/The-Way-of-Kings-by-Brandon-Sanderson.jpg" alt="" class="book__img">
+                            </figure>
                             <div class="book__title">
-                                Book Title
+                                The Way Of Kings
                             </div>
                             <div class="book__ratings">
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
@@ -131,8 +157,9 @@
                                 <div class="book__ratings"><i class="fa fa-star"></i></div>
                                 <div class="book__ratings"><i class="fa fa-star-half"></i></div>
                             </div>
-                            <div class="boo__price">
-                                <span class="book__price--normal">40lv. </span> 14.99lv.
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv.</span> <span
+                                    class="discounted__price">19.99lv.</span>
                             </div>
                         </div>
                     </div>
@@ -142,12 +169,180 @@
         <section id="recent">
             <div class="container">
                 <div class="row">
-
+                    <h2 class="section__title"> Latest <span class="purple">Books</span></h2>
+                    <div class="books">
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/8447255.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                The Crippled God
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">15.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/822993.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                A Game Of Thrones
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star-half"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">14.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/61215351._SY475_.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                Fellowship Of The Ring
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">9.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/44767458.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                Dune
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star-half"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">18.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/22878967.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                The Shadow Of What Was Lost
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star-half"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">14.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/175983._SY475_.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                Memories Of Ice
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">14.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/15750692.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                Malice
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv. </span> <span
+                                    class="discounted__price">24.99lv.</span>
+                            </div>
+                        </div>
+                        <div class="book">
+                            <figure class="book__img--wrapper"><img src="./assets/8/2315892.jpg" alt=""
+                                    class="book__img"></figure>
+                            <div class="book__title">
+                                Best Served Cold
+                            </div>
+                            <div class="book__ratings">
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star"></i></div>
+                                <div class="book__ratings"><i class="fa fa-star-half"></i></div>
+                            </div>
+                            <div class="book__price">
+                                <span class="book__price--normal">40lv.</span> <span
+                                    class="discounted__price">15.99lv.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="explore">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section__title"> Explore More <span class="purple">Books</span></h2>
+                    <button class="btn">Browse books</button>
                 </div>
             </div>
         </section>
     </main>
-
+    <footer>
+        <div class="container">
+            <div class="row row__column">
+                <a href="#">
+                    <figure class="footer__logo"><img src="./assets/Library.svg" alt=""></figure>
+                </a>
+                <div class="footer__list">
+                <a href="" class="footer__link">Home</a>
+                <a href="" class="footer__link">About</a>
+                <a href="" class="footer__link">Books</a>
+                <a href="" class="footer__link">Contact</a>
+                </div>
+                <div class="footer__copyright">Copyright &copy 2022 Library</div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
